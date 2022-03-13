@@ -1,0 +1,2 @@
+# Templator
+Project generator
