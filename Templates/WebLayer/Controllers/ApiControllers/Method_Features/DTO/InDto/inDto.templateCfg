@@ -1,0 +1,15 @@
+@RequiresFile="#EntityName.dto"
+{
+    public class #EntityName#Dto 
+    {
+        *for prop in #EntityProperties
+        {
+            public prop.type prop.name { get; set; }
+        }
+    }
+}
+@Selector("inDto")
+@Input("InDtoFolderName")
+@RequiresFolder="WebLayer/Dtos/#InDtoFolderName"
+
+#EntityName#Dto

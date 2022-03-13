@@ -1,0 +1,30 @@
+@Selector("postMethod")
+@Group("UnitOfWork", "Repository")
+@Variable("ReturnType")
+@ConstructorTemplateDependency="[{ template: "/DataAcess/UOW", name: "uow" }]"
+@ConstructorTemplateDependency="[{ template: "/WebLayer/Mapper", name: "mapper" }]"
+#ReturnType = uow.ReturnType
+
+*If UnitOfWork 
+{
+    public Task{{ #ReturnType ? "<@@outDto>" : "" }} Create#EntityName(@@inDto dto)
+    {
+        var entity = mapper.Map<@@inDto, #EntityName>(dto);
+
+        *If #ReturnType 
+        {
+            var savedEntity = uow.#EntityName.Create(entity);
+        }
+        *Else 
+        {
+            uow.#EntityName.Create(entity);
+        }
+        
+        await uow.SaveChangesAsync();
+
+        *If #ReturnType 
+        {
+            return mapper.Map<#EntityName, @@outDto>(savedEntity);
+        }
+    }
+}

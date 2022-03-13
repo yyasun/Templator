@@ -1,0 +1,3 @@
+@TemplateReferences
+@Input("projectName")
+@RequiresProject="projectName"

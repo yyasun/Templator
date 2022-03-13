@@ -1,0 +1,13 @@
+@Input(controllerFolderName)
+@Group(EfCore, Dapper)
+@ProjectReference="WebLayer/CreateWebLayer"
+@RequiresFolder(controllerFolderName)
+
+[ApiController]
+public class {#EntityName}Controller 
+{
+    @@getMethod
+    @@postMethod
+    @@putMethod
+    @@deleteMethod
+}
