@@ -1,11 +1,11 @@
 @Selector("postMethod")
-@Group("UnitOfWork", "Repository")
+@NestedVariable("UnitOfWork", "Repository")
 @Variable("ReturnType")
 @ConstructorTemplateDependency="[{ template: "/DataAcess/UOW", name: "uow" }]"
 @ConstructorTemplateDependency="[{ template: "/WebLayer/Mapper", name: "mapper" }]"
 #ReturnType = uow.ReturnType
 
-*If UnitOfWork 
+*If UnitOfWork
 {
     public Task{{ #ReturnType ? "<@@outDto>" : "" }} Create#EntityName(@@inDto dto)
     {
