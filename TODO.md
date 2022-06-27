@@ -1,1 +1,1 @@
-[ ] #ReturnType = uow.ReturnType // TODO: how  to implement this shit? Using a selector?? @@uow.ReturnType
+[] #ReturnType = uow.ReturnType // TODO: how  to implement this shit? Using a selector?? @@uow.ReturnType
