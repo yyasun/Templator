@@ -1,4 +1,4 @@
-@RequiresFile="#EntityName.dto"
+@GeneratesFile="#EntityName.dto"
 {
     public class #EntityName#Dto 
     {
