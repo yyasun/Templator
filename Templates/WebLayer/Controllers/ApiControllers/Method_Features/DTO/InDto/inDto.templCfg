@@ -10,6 +10,6 @@
 }
 @Selector("inDto")
 @Input("InDtoFolderName")
-@RequiresFolder="WebLayer/Dtos/#InDtoFolderName"
+@GeneratesFolder="WebLayer/Dtos/#InDtoFolderName"
 
 #EntityName#Dto
