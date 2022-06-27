@@ -44,6 +44,6 @@ Generates folder.
 @TemplateReferences
 writes all template references.
 
-## @GeneratesProject
+> @GeneratesProject
 
 @GeneratesProject="projectName"
