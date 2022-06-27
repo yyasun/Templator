@@ -8,11 +8,11 @@ Project generator
 
 # Ats(dogs)(tags):
 
-## @Input
+> @Input
 
 @Input - user input 
 
-## @Selector
+> @Selector
 
 @Selector("inDto") - tag used to get template output in a template. 
 Usage:
@@ -21,12 +21,12 @@ Example:
 public Task<> Create#EntityName(@@inDto dto)
 
 
-## @GeneratesFolder
+> @GeneratesFolder
 
 @GeneratesFolder="WebLayer/Dtos/#InDtoFolderName"
 Generates folder.
 
-## @GeneratesFile
+> @GeneratesFile
 
 @GeneratesFile="#EntityName.dto"
 {
@@ -39,7 +39,7 @@ Generates folder.
     }
 }
 
-## @TemplateReferences
+> @TemplateReferences
 
 @TemplateReferences
 writes all template references.
