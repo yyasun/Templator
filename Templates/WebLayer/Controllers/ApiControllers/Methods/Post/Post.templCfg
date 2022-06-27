@@ -2,6 +2,7 @@
 @NestedVariable("UnitOfWork", "Repository")
 @Variable("ReturnType")
 @ConstructorTemplateDependency="[{ template: "/DataAcess/UOW", name: "uow" }]"
+@ConstructorTemplateDependency="[{ template: "/DataAcess/Repository", name: "repo" }]"
 @ConstructorTemplateDependency="[{ template: "/WebLayer/Mapper", name: "mapper" }]"
 #ReturnType = uow.ReturnType // TODO: how  to implement this shit? Using a selector?? @@uow.ReturnType
 
