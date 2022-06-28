@@ -12,9 +12,11 @@
 
 > @Selector
 
-@Selector("inDto") - tag used to get template output in a template. 
+@Selector("inDto") - tag used to get template output in a template.
+
 Usage:
 @@selectorName
+
 Example:
 public Task<> Create#EntityName(@@inDto dto)
 
